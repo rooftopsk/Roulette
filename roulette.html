@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Roulette</title>
+  <link rel="stylesheet" href="roulette.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet"> 
+</head>
+<body>
+
+
+<div class="mise">
+  <img src="images/logo-roulette.jpg">
+  <div class="button-section">
+    <button class="btn bouton" id="retirer">Retirer</button>
+    <button class="btn bouton" id="ajouter">Ajouter</button>
+    <h2 id="solde">Votre solde est: 0</h2>
+  </div>
+</div>
+
+<div class="roulette">
+  <div class="wheel spin">
+    <img src="images/roue.png">
+  </div>
+  <button class="btn-jouer bouton">Jouer</button>
+  <div class="btn-container">
+    <button class="btn-cercle rouge btn-rouge"></button>
+    <button class="btn-cercle noir btn-noir"></button>
+  </div>
+  <div>
+    <button class="btn-annuler-mise bouton">Annuler la mise</button>
+    <h3>Votre mise est:</h3>
+  </div>
+</div>
+
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js'></script>
+
+<script src="./roulette.js"></script>
+
+</body>
+</html>
+

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Connexion</title>
+  <link rel="stylesheet" href="login.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+<div class="login-box">
+  <h2>Connexion</h2>
+  <form onsubmit="return validateForm()">
+    <div class="user-box">
+      <input type="text" name="username" id="username" required>
+      <label>Nom d'utilisateur</label>
+    </div>
+    <div class="user-box">
+      <input type="password" name="password" id="password" required>
+      <label>Mot de passe</label>
+    </div>
+    <button type="submit" class="login-button">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      Se connecter
+    </button>
+  </form>
+  <div id="error-message" style="color: red;"></div>
+</div>
+
+<script>
+ 
+  const validUsername = "Osullivan";
+  const validPassword = "Osullivan2023";
+
+  function validateForm() {
+   
+    const enteredUsername = $("#username").val();
+    const enteredPassword = $("#password").val();
+
+    
+    if (enteredUsername === validUsername && enteredPassword === validPassword) {
+    
+      window.location.href = "roulette.html";
+      return false; 
+    } else {
+     
+      $("#error-message").text("Credentials invalid");
+      return false; 
+    }
+  }
+</script>
+
+
+</body>
+</html>

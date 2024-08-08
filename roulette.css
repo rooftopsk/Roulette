@@ -1,0 +1,156 @@
+body {
+  margin: 0;
+  background: linear-gradient(#141e30, #243b55);
+  font-family: 'Silkscreen', sans-serif;
+  max-width: 1920px;
+  padding: 30px;
+}
+.roulette {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.roulette .wheel img {
+  transition: transform 10s cubic-bezier(0.3, 1, 0.7, 1), 10s filter cubic-bezier(0.1, 1, 0.8, 1), 10s -webkit-filter cubic-bezier(0.1, 1, 0.8, 1);
+  will-change: transform;
+  border-radius: 50%;
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 600px;
+  
+}
+.roulette .arrow {
+  width: 0;
+  height: 0;
+  border: 80px solid transparent;
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, -100px);
+  z-index: 20;
+  border-radius: 0.35em;
+}
+.spin {
+  cursor: crosshair;
+  position: relative;
+}
+
+.spin::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: url("images/feu.jpg");  
+  opacity: 0.8;
+  pointer-events: none;
+  animation: flame-rotation 2s ease-in-out infinite;
+  border-radius: 50%;
+  
+}
+
+@keyframes flame-rotation {
+  0%, 100% {
+    opacity: 0.8;
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.2) rotate(45deg);
+  }
+}
+
+.mise img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+ 
+.mise  {
+ justify-content: space-between;
+ display : flex ;
+ width: 100%;
+
+}
+
+
+
+/* BOUTON ROUGE ET NOIR  */
+
+.btn-cercle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 10px;
+  cursor: pointer;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;  
+border: none;
+}
+
+
+.rouge {
+  background: linear-gradient(to bottom, #ff0000, #990000); 
+}
+
+
+.noir {
+  background: linear-gradient(to bottom, #000000, #444444); 
+}
+
+.btn-cercle:hover {
+  transform: scale(1.1); /* Effet d'agrandissement au survol */
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.7), 0 0 40px rgba(255, 255, 255, 0.7); /* Effet de brillance et ombre 3D */
+}
+
+
+
+/* BOUTON ANNULER LA MISE  */
+
+.btn-annuler-mise, .bouton {
+  background: linear-gradient(to right, #ff0000, #990000); 
+  color: #ffffff; 
+  padding: 10px 20px; 
+  font-size: 16px; 
+  border: 2px solid #ff0000; 
+  border-radius: 5px; 
+  margin-top: 10px;
+  cursor: pointer; 
+  font-family: 'Silkscreen', sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  transition: transform 0.3s ease-in-out, background 0.3s ease-in-out; 
+}
+
+.btn-annuler-mise:hover, .bouton:hover {
+  transform: translate(0, -5px); 
+  background: linear-gradient(to right, #990000, #ff0000); 
+}
+
+
+.bouton:hover {
+  background-color: #ff0000; /* Changement de couleur de fond au survol (rouge) */
+  color: #ffffff; /* Changement de couleur du texte au survol (blanc) */
+  font-family: 'Silkscreen', sans-serif;
+}
+
+#ajouter {
+  font-family: 'Silkscreen', sans-serif;
+}
+
+#retirer {
+  font-family: 'Silkscreen', sans-serif;
+}
+
+.btn-jouer {
+  font-family: 'Silkscreen', sans-serif;
+  padding: 10px;
+  margin-top: 150px;
+
+ }
+ 
+
+
